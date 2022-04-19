@@ -1,12 +1,6 @@
-import { SheetRow } from "./types";
-class CueSheetGenerator {
-    public m_input_file = "";
-    public m_destination = "./converted_sheets"
-    public m_data: SheetRow[] = []
-    constructor(inputFile: string) {
-        this.m_input_file = inputFile;
-    }
-
-
-
-}
+import { CueSheetGenerator } from "lib/CueSheetGenerator";
+import fs from "fs";
+const filestr = fs.readFileSync("./sheets/HISTORY-2022-04-19.txt", {
+    encoding: "utf-8",
+});
+const csg = new CueSheetGenerator(filestr);

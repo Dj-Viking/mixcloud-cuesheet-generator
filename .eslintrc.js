@@ -1,3 +1,5 @@
+/* istanbul ignore file */
+
 module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -7,7 +9,6 @@ module.exports = {
   },
   plugins: ['@typescript-eslint/eslint-plugin'],
   extends: [
-    'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
   ],
   root: true,
@@ -17,6 +18,9 @@ module.exports = {
   },
   ignorePatterns: [".eslintrc.js", "babel.config.js", "jest.config.ts"],
   rules: {
+    "prettier/prettier": "off",
+    "indent": [2, 4],
+    "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/no-namespace": "off",
     "prefer-const": "off",
     "semi": ["error", "always"],
