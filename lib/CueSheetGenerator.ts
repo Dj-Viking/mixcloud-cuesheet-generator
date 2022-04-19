@@ -7,5 +7,9 @@ export class CueSheetGenerator {
         this.m_input_filestr = inputFile;
     }
 
-    public parseFile(): void { }
+    public parseFile(): void {
+        let data = this.m_input_filestr.split("\n");
+        console.log("parsed input filestr", data);
+
+    }
 }
