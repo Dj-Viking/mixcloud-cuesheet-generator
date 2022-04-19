@@ -8,7 +8,9 @@
       "es2017",
       "esnext.asynciterable"
     ],
-    "types": ["node", "jest"],
+    "types": [
+      "node"
+    ],
     "skipLibCheck": false,
     "sourceMap": true,
     "outDir": "dist",
@@ -27,7 +29,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "resolveJsonModule": true,
-    "baseUrl": "src"
+    "baseUrl": "./"
   },
   "exclude": [
     "node_modules",

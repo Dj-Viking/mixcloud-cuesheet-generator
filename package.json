@@ -1,18 +1,26 @@
 {
   "name": "tracklist-parser",
   "version": "1.0.0",
-  "description": "",
+  "description": "Create a mixcloud tracklist cue sheet parsed from RekordBox history .txt export",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "tsc -w",
+    "watch": "tsc -w",
     "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Anders Ackerman <anders.swedishviking@gmail.com>",
+  "license": "MIT",
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
     "typescript": "^4.6.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.25",
+    "eslint": "^8.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2"
   }
 }
