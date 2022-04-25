@@ -8,12 +8,9 @@
  * 
  * time stamps not included
  */
-import { SheetRow } from "../types";
 import fs from "fs";
 export class CueSheetGenerator {
-    public m_input_filestr = "";
-    public m_destination = "./converted_sheets";
-    public m_data: SheetRow[] = [];
+    public m_input_filestr!: string;
     constructor(inputFile: string) {
         this.m_input_filestr = inputFile;
     }
@@ -75,7 +72,7 @@ export class CueSheetGenerator {
         // this file path is in the context of where the npm script was ran (root directory)
         fs.writeFile(`./converted_sheets/converted.${Date.now()}.txt`, str, { encoding: "utf-8" }, (err) => {
             if (err) throw err;
-            console.log("\x1b[32m wrote file! \x1b[00m");
+            console.log("\x1b[32m wrote file to converted_sheets folder! \x1b[00m");
         });
     }
 }

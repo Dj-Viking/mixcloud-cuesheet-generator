@@ -7,9 +7,6 @@ exports.CueSheetGenerator = void 0;
 const fs_1 = __importDefault(require("fs"));
 class CueSheetGenerator {
     constructor(inputFile) {
-        this.m_input_filestr = "";
-        this.m_destination = "./converted_sheets";
-        this.m_data = [];
         this.m_input_filestr = inputFile;
     }
     parseFile() {
@@ -55,7 +52,7 @@ class CueSheetGenerator {
         fs_1.default.writeFile(`./converted_sheets/converted.${Date.now()}.txt`, str, { encoding: "utf-8" }, (err) => {
             if (err)
                 throw err;
-            console.log("\x1b[32m wrote file! \x1b[00m");
+            console.log("\x1b[32m wrote file to converted_sheets folder! \x1b[00m");
         });
     }
 }
