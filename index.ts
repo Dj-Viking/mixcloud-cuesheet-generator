@@ -7,4 +7,5 @@ const filestr = fs.readFileSync("./sheets/HISTORY-2022-04-19.txt", {
 const csg = new CueSheetGenerator(filestr);
 
 
-csg.parseFile();
+
+csg.writeFile(csg.parseFile());

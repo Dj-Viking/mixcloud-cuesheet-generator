@@ -9,5 +9,5 @@ const filestr = fs_1.default.readFileSync("./sheets/HISTORY-2022-04-19.txt", {
     encoding: "utf16le",
 });
 const csg = new CueSheetGenerator_1.CueSheetGenerator(filestr);
-csg.parseFile();
+csg.writeFile(csg.parseFile());
 //# sourceMappingURL=index.js.map
