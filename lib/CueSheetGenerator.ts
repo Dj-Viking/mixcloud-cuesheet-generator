@@ -51,7 +51,7 @@ export class CueSheetGenerator {
 
         console.log("words again", words);
 
-        let rows = words.flat(1) as string[];
+        let rows = words.flat<string[][], 1>(1) as string[];
 
         console.log("rows now", rows, "rows length", rows.length);
 
