@@ -3,7 +3,7 @@
  * so the parsing is very specific and one size may not fit all
  * 
  * also some minimal editing will be required like separating the song names and the artist name by a -
- * example: song_name - artist_name
+ * example: artist_name - song_name
  * this will separate itself within mixcloud
  * 
  * time stamps not included
