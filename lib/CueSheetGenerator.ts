@@ -11,6 +11,7 @@
 import fs from "fs";
 export class CueSheetGenerator {
     public m_input_filestr!: string;
+
     constructor(inputFile: string) {
         this.m_input_filestr = inputFile;
     }
@@ -68,7 +69,7 @@ export class CueSheetGenerator {
 
     }
 
-    writeFile(str: string): void {
+    public writeFile(str: string): void {
         // this file path is in the context of where the npm script was ran (root directory)
         fs.writeFile(`./converted_sheets/converted.${Date.now()}.txt`, str, { encoding: "utf-8" }, (err) => {
             if (err) throw err;
