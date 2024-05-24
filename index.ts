@@ -6,10 +6,10 @@ let dir: string[] = [];
 try {
     dir = fs.readdirSync("./sheets");
     if (dir.length === 0) {
-        throw new Error("No files found in sheets directory!");
+        throw new Error("\x1b[35m[ERROR]: No files found in sheets directory!\x1b[00m");
     }
 } catch (error) {
-    console.error("\x1b[31m error happened when reading sheets directory \x1b[00m", error);
+    console.error("\x1b[31m error happened when reading sheets directory \x1b[00m\n", error);
     process.exit(1);
 }
 inquirer.prompt([{
@@ -19,8 +19,9 @@ inquirer.prompt([{
     choices: [...dir]
 }]).then(result => {
     console.log('result', result);
+    // gotta use utf8 now huh
     const filestr = fs.readFileSync(`./sheets/${result.filename}`, {
-        encoding: "utf16le",
+        encoding: "utf-8",
     });
     const csg = new CueSheetGenerator(filestr);
 
