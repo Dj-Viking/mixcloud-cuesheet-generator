@@ -31,6 +31,7 @@ class CueSheetGenerator {
         const morefilteredParts = parts.flat().map(str => {
             let res = "";
             res = / - /g.test(str) ? str.slice(12) : str.slice(15);
+            res = res.replace(/^ - /g, "");
             return res;
         }).filter(str => str !== "");
         console.log("more filtered parts", morefilteredParts);
