@@ -1,7 +1,8 @@
 import { CueSheetGenerator } from "./lib/CueSheetGenerator";
 import fs from "fs";
 import inquirer from "inquirer";
-// the exported cue sheets are utf16le encoding
+// the exported cue sheets are utf16le encoding // 2 years ago
+// now it's utf8 lol
 let dir: string[] = [];
 try {
     dir = fs.readdirSync("./sheets");
