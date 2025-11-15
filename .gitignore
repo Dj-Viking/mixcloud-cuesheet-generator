@@ -1,5 +1,6 @@
 node_modules
 .env
 sheets/
+playlists
 converted_sheets/
 .DS_Store
