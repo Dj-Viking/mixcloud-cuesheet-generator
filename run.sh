@@ -9,3 +9,5 @@ if ! [ -d converted_sheets ]; then
 fi
 
 node dist/index.js
+
+open converted_sheets;
